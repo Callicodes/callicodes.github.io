@@ -14,43 +14,21 @@
       font-style: italic;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to right, #fff9e6, #e0f7fa);
+      background: linear-gradient(to right, #e0f7fa, #f1f8e9);
       color: #2c3e50;
     }
-
     .container {
       max-width: 900px;
       margin: auto;
       padding: 30px;
     }
-
-    /* Header */
-    header {
+    h1 {
       background: linear-gradient(135deg, #f9d423, #fc913a, #00b4d8);
-      padding: 25px;
-      border-radius: 12px;
-      color: #fff;
-      text-align: center;
-      margin-bottom: 30px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-    }
-    header h1 {
-      margin: 0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       font-size: 3em;
+      margin-bottom: 15px;
     }
-    header p {
-      margin-top: 5px;
-      font-size: 1.2em;
-    }
-
-    .section {
-      background-color: white;
-      border-radius: 12px;
-      padding: 25px;
-      margin-bottom: 30px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-    }
-
     h2 {
       color: #16a085;
       margin-bottom: 15px;
@@ -61,19 +39,21 @@
       margin-right: 10px;
       color: #1abc9c;
     }
-
     p {
       font-size: 1.1em;
       line-height: 1.7;
     }
-
-    /* Skills and Projects */
+    .section {
+      background-color: rgba(255,255,255,0.95);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    }
     .skills ul, .projects ul {
       list-style: none;
       padding: 0;
-      margin: 0;
     }
-
     .skills li, .projects li {
       margin-bottom: 12px;
       display: flex;
@@ -83,73 +63,64 @@
       margin-right: 10px;
       color: #16a085;
     }
-
-    /* Project cards */
-    .project-card {
+    .projects .project-container {
       display: flex;
-      align-items: flex-start;
-      margin-bottom: 20px;
-      background: #f9f9f9;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      flex-direction: column;
+      margin-bottom: 25px;
     }
-    .project-card img {
-      max-width: 200px;
+    .projects .project-container img {
+      max-width: 100%;
       height: auto;
+      margin-top: 10px;
       border-radius: 8px;
-      margin-right: 20px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .project-card .project-info h3 {
-      margin-top: 0;
-      margin-bottom: 8px;
-      font-size: 1.3em;
-      color: #1abc9c;
-    }
-    .project-card .project-info a {
-      text-decoration: none;
+    .projects .project-title {
       font-weight: bold;
-      color: #2c3e50;
-      transition: color 0.3s ease;
+      margin-bottom: 5px;
+      font-size: 1.1em;
+      display: flex;
+      align-items: center;
     }
-    .project-card .project-info a:hover {
+    .projects .project-title i {
+      margin-right: 10px;
       color: #16a085;
     }
-
-    /* Contact section */
     .contact-item {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 15px;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background: #f0f4f8;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
       flex-wrap: wrap;
     }
     .contact-item span {
       margin-right: 15px;
+      font-weight: bold;
     }
     .contact-item a.button {
       background-color: #1abc9c;
       color: white;
-      padding: 6px 12px;
-      border-radius: 5px;
+      padding: 8px 14px;
+      border-radius: 8px;
       text-decoration: none;
       font-size: 0.9em;
-      transition: background-color 0.3s ease;
-      margin-top: 5px;
+      transition: background 0.3s ease;
     }
     .contact-item a.button:hover {
-      background-color: #16a085;
+      background: linear-gradient(135deg, #f9d423, #fc913a, #00b4d8);
+      color: white;
     }
-
   </style>
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>Callicodes</h1>
-      <p>Front-End Developer Portfolio</p>
-    </header>
+    <!-- Header -->
+    <h1>Callicodes</h1>
+    <p>Senior Front-End Developer | React | TypeScript | AWS | Node.js</p>
 
     <!-- About Me -->
     <div class="section about">
@@ -171,28 +142,48 @@
     <!-- Projects -->
     <div class="section projects">
       <h2><i class="fas fa-project-diagram"></i>Projects</h2>
-
-      <div class="project-card">
+      
+      <!-- React Dashboard MUI -->
+      <div class="project-container">
+        <div class="project-title"><i class="fas fa-folder-open"></i>React Dashboard (Material UI)</div>
+        <a href="https://github.com/Callicodes/react-dashboard-mui" target="_blank">View on GitHub</a>
         <img src="images/dashboard.png" alt="React Dashboard Screenshot">
-        <div class="project-info">
-          <h3>React Dashboard (Material UI)</h3>
-          <a href="https://github.com/Callicodes/react-dashboard-mui" target="_blank">View Project</a>
-        </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-info">
-          <h3>React Dashboard (Tailwind/ChartJS)</h3>
-          <a href="https://github.com/Callicodes/responsive-react-dashboard-react-tailwind-chartjs" target="_blank">View Project</a>
-        </div>
+      <!-- React Dashboard Tailwind -->
+      <div class="project-container">
+        <div class="project-title"><i class="fas fa-folder-open"></i>React Dashboard (Tailwind/ChartJS)</div>
+        <a href="https://github.com/Callicodes/responsive-react-dashboard-react-tailwind-chartjs" target="_blank">View on GitHub</a>
+        <img src="images/react-dashboard.png" alt="React Dashboard Tailwind Screenshot">
       </div>
 
-      <div class="project-card">
-        <div class="project-info">
-          <h3>React Todo List App</h3>
-          <a href="https://github.com/Callicodes/react-todo-list-app" target="_blank">View Project</a>
-        </div>
-      </div>
+      <!-- Other Projects -->
+      <ul>
+        <li>
+          <i class="fas fa-folder-open"></i>
+          <a class="project-link" href="https://github.com/Callicodes/react-todo-list-app" target="_blank">React Todo List App</a>
+        </li>
+        <li>
+          <i class="fas fa-folder-open"></i>
+          <a class="project-link" href="https://github.com/Callicodes/investment-fund-selector" target="_blank">Investment Fund Selector</a>
+        </li>
+      </ul>
+    </div>
 
-      <div class="project-card">
-        <div class="project-info">
+    <!-- Contact -->
+    <div class="section contact">
+      <h2><i class="fas fa-envelope"></i>Contact</h2>
+      <div class="contact-item">
+        <i class="fas fa-envelope" style="color:#1abc9c;"></i>
+        <span>Email: callicodes@gmail.com</span>
+        <a class="button" href="mailto:callicodes@gmail.com">Send Email</a>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-github" style="color:#1abc9c;"></i>
+        <span>GitHub: github.com/callicodes</span>
+        <a class="button" href="https://github.com/callicodes" target="_blank">View Profile</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
